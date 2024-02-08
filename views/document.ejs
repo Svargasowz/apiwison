@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentacion de la api</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>DOCUMENTACION DE API</h1>
+    <hr>
+    <table>
+        <tr><td>NUMERO</td><td>1</td></tr>
+        <tr><td>NOMBRE DEL SERVICIO</td><td> listar usuarios</td></tr>
+        <tr><td>URI</td><td>/usuario/listar</td></tr>
+        <tr><td>DESCRIPCION</td><td>permite listar a los usuarios en la base de datos</td></tr>
+        <tr><td>VERBO HTTP</td><td>GET</td></tr>
+        <tr><td>HEADER</td><td>NULL</td></tr>
+        <tr><td>USUARIOS</td><td>Administrador</td></tr>
+        <tr><td>PETICION JSON</td><td>{nombre juanito}</td></tr>
+        <tr><td>RESPUESTA JSON</td><td>
+            Correcto:
+            Status:200
+            json:
+            {
+                "idusuario": 85,
+                "nombres": "Wilson Martinez S",
+                "direccion": "32131311",
+                "telefono": "1221121",
+                "correo": "wimartinez@gmail.com",
+                "rol": "",
+                "password": "1111"
+            }
+            <br>
+            Incorrecto:
+            body:{
+                status:404
+                message:'no se encontro usuario
+            }
+            Error:
+            status:500
+            body:{
+                message:'no se encontro en el servidor'
+            }
+        </td></tr>
+    </table>
+</body>
+</html>
